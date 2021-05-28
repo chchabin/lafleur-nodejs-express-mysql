@@ -1,0 +1,28 @@
+<%- include ('categories') %>
+<div class="produits">
+    <section class="products">
+        <% for( unProduit of lesProduits)
+        {
+            id = unProduit['id'];
+            description = unProduit['description'];
+            prix = unProduit['prix'];
+            image = unProduit['image'];
+        %>
+        <div class="product-card">
+            <div class="product-info">
+                <h5><%= description %></h5>
+            </div>
+            <div class="product-image">
+                <img src="<%= image %>" alt=image/>
+            </div>
+            <div class="product-info">
+                <h6>prix : <%= prix %> Euros <a href="/ajouterAuPanier/<%= categorie %>&<%= id %>">
+                        <img src="images/mettrepanier.png" TITLE="Ajouter au panier"> </a></h6>
+            </div>
+        </div>
+
+        <% } %>
+    </section>
+</div>
+
+

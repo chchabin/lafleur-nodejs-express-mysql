@@ -1,0 +1,14 @@
+<%- include ('bandeau')%>
+<ul class="nav ul">
+<% for(uneCategorie of lesCategories )
+{
+	const idCategorie = uneCategorie['id'];
+	const libCategorie = uneCategorie['libelle'];
+	%>
+    <li>
+        <a href="/voirProduits<%= idCategorie%>"><%= libCategorie %></a>
+    </li>
+
+<% }%>
+</ul>
+
